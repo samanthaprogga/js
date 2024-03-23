@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  form {
+    margin-bottom: 1em;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 1em;
+  }
+  
+  input[type="text"] {
+    width: 100px;
+  }
+  
+  select {
+    margin-right: 1em;
+  }
+  
+  button {
+    margin-left: 1em;
+  }
+  
+  #result {
+    margin-top: 1em;
+    font-weight: bold;
+  }

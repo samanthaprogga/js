@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+.flex{
+  display: flex;
+}
+
+body{
+  background-color: rgb(241,244,246);
+  font-family: 'Roboto', 'Roboto Flex', 'Arial',sans-serif;
+  color: #000;
+}
+
+/*----------------------------*/
+/* Header                     */
+/*----------------------------*/
+::placeholder{
+  color: #fff;
+}
+
+h1{
+  font-size:30px; 
+}
+
+h1 a{
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  height: 56px;
+  background-color: #2c0e72;
+}
+
+.header{
+  justify-content: space-between;
+  align-items: center;
+}
+  nav {
+    display: flex;
+    padding: 5px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+  }
+  
+  nav a:hover {
+    color: #000;
+  }
+
+.container{
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+    height: 60px;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+
+form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    height: 50px;
+    width: 360px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #000;
+}
+input[type='button'] {
+  background-color: #2c0e72;
+  color: #fff;
+  padding: 0 15px;
+  border-radius: 4px;
+}
+
+button {
+    height: 50px;
+    padding: 10px 20px;
+    background-color: #2c0e72;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    bottom: 40px;
+    align-items: end;
+    position: absolute;
+    left: 80px;}
+.radio-buttons{
+    height: 50px;
+    line-height: 50px;
+    display:flex;
+    gap:20px;
+}
+
+.temp-buttons{
+    display:flex;
+    gap:5px;
+}
+
+#result-box {
+    padding: 20px;
+    width: 360px;
+    background-color: #d5d3d3;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #000;
+}
+
+.dark-mode {
+  background-color: #191919;
+  color: #fff;
+}
+
+.dark-mode header {
+  background-color: #2c0e72;
+  color: #f6f5f9;
+}
+
+.dark-mode button {
+  background-color: #fff;
+  color: #1a1919;
+}

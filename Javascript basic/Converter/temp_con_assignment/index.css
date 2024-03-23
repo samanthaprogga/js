@@ -1,0 +1,34 @@
+body {
+    background-color: #000;
+  }
+  
+  #container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  label,
+  input[type="text"],
+  button,
+  span {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  input[type="text"]#result {
+    width: 100px;
+    margin-left: 1em;
+  }
+  
+  button {
+    padding: 5px 10px;
+  }

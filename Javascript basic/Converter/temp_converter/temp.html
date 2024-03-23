@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nishat Samanta Progga">
+  <meta name="description" content="Temperature">
+  <meta name="keywords" content="html, css, web, web development, javascript">
+  <title>Temperature Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css">
+  <link rel="stylesheet" href="temp.css">
+  <script src="temp.js" defer></script>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <form id="temperature-converter">
+      <label for="temperature">Enter temperature:</label>
+      <input type="text" id="temperature" name="temperature" />
+      <label for="convert-from">Convert from:</label>
+      <select id="convert-from">
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="celsius">Celsius</option>
+      </select>
+      <label for="convert-to">Convert to:</label>
+      <select id="convert-to">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+      </select>
+      <button type="button" id="convert-button">Convert</button>
+    </form>
+    <p id="result"></p>
+    <script src="temp.js"></script>
+  </body>
+</html>

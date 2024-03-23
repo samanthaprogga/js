@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nishat Samanta Progga">
+  <meta name="description" content="Temperature">
+  <meta name="keywords" content="html, css, web, web development, javascript">
+  <title>Temperature Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container flex header">
+            <h1><a href="index.html">Converter<a></h1>
+            <nav>
+              <a href="#">Projects</a>
+              <a href="#">About Me</a>
+              <a href="#">Contact</a>
+            </nav>
+            </div>
+    </header>
+    <main>
+
+        <div class="container">
+            <h2>Temperature Converter</h2>
+            <form id="temperature-form">
+                <input type="number" id="temperature-input">
+                <div class="radio-buttons">
+                    <div class="temp-buttons">
+                        <input type="radio" id="to-celsius" name="conversion" value="celsius" checked>
+                        <label for="to-celsius">To Celsius</label>
+                    </div>
+                    <div class="temp-buttons">
+                        <input type="radio" id="to-fahrenheit" name="conversion" value="fahrenheit">
+                        <label for="to-fahrenheit">To Fahrenheit</label>
+                    </div>
+                </div>
+
+                <input type="button" id="convert" value="Convert">
+            </form>
+            <div id="result-box"></div>
+        </div>
+    </main>
+    <button id="themeSwitcher">Dark Mode</button>
+</body>
+</html>
+

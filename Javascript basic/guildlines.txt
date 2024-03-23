@@ -1,0 +1,20 @@
+
+
+
+
+- In a web project, name your 'js' file 'app' or 'index'
+- Your code must be clean, organized and readable
+- Add ;use strict' to all yout 'js' files. ALWAYS
+- Use the proper naming convention when creating files, variables, constants,
+  objects, arrays and functions
+- Don't use 'var'. Use 'let' and 'const' instead
+- Use variables instead of hard-coded values
+- Don't you dare use 'if (true)' or 'while(true)'
+- Don't compare a Boolean to true/false. The value is alreay a Boolean
+- Use ===instead of==
+
+
+- Keep your functions short. One function should do one job
+
+
+

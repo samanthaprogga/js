@@ -1,0 +1,110 @@
+body {
+  background-color: #111111;
+  font-family: Arial, sans-serif;
+  color: #fef6f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: -10px; /* Add negative margin to create the gap */
+}
+
+.flex {
+  flex: 1;
+  margin: 10px; /* Adjust the margin to control the size of the gap */
+}
+
+.flex > div {
+  width: 330px;
+  height: 140px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 252, 252, 0.2);
+  text-align: center;
+  margin-bottom: 20px; /* Add margin between the boxes */
+}
+
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.align-flex-center{
+  align-items: center;
+}
+
+.gap {
+  gap: 20px;
+}
+.flex > div {
+  width: 330px;
+  height: 180px;
+  border-radius: 6px;
+  border: 1px solid rgb(255 255 255 / 0.2);
+  text-align: center;
+}
+div.battery {
+  height: 135px;
+}
+
+.box {
+  background-color: #0b0b0b;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-size: 18px;
+  
+}
+div.network {
+  width: 330px;
+  height: 50px;
+  border-radius: 6px;
+  border: 1px solid rgba(241, 240, 240, 0.2);
+  text-align: center;
+}
+
+
+
+.device-type,
+.lang-type,
+.browser-type,
+.width,
+.height,
+.orientation,
+.level,
+.status {
+  margin-bottom: 50px;
+}
+.status {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.online {
+  background-color: green;
+  color: rgb(238, 240, 238);
+}
+
+.offline {
+  background-color: red;
+  color: rgb(239, 235, 235);
+}

@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+:root {
+  --background-dark: rgb(24, 23, 22);
+}
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+body {
+  background-color: var(--background-dark);
+  transition: all 0.25s ease-in-out;
+}
+
+main {
+  padding: 60px 0;
+}
+
+h2, h3, p, span {
+  color: #fff;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p, span {
+  font-size: 18px;
+}
+
+p:first-of-type {
+  margin-top: 30px;
+}
+
+button {
+  margin-top: 30px;
+  width: 120px;
+  height: 46px;
+  background-color: #007fff;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+}
+
+form {
+  margin-top: 30px;
+  width: 380px;
+  /* Hack to remove the space between inputs */
+  font-size: 0;
+}
+
+input[type=text] {
+  width: 100%;
+  background-color: rgb(255 255 255 / 0.05);
+  border: 1px solid rgb(255 255 255 / 0.05);
+  padding: 0 15px;
+}
+
+form input {
+  font-size: 16px;
+  color: #fff;
+  height: 46px;
+  border-radius: 5px;
+}
+
+input[type=button] {
+  width: 100px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input[type=button] + input[type=button] {
+  margin-left: 15px;
+}
+
+.assign {
+  background-color: #007fff;
+}
+
+.replace {
+  color: #007fff;
+  background-color: #fff;
+}
+
+.copy {
+  background-color: #ff007f;
+}

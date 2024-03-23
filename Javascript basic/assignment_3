@@ -1,0 +1,235 @@
+//Exercise 1
+// Function to validate the array
+function validateArray(arr, minLength) {
+  if (!Array.isArray(arr)) {
+    console.error('Invalid data type. Expected an array.');
+    return false;
+  }
+
+  if (arr.length < minLength) {
+    console.error(`Array length must be at least ${minLength}.`);
+    return false;
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== 'number') {
+      console.error('Invalid data type in array. Expected a number.');
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// Function to print an array using forEach()
+function printArray(arr) {
+  arr.forEach((element, index) => {
+    console.log(`Element ${index + 1}: ${element}`);
+  });
+}
+
+// Function to sort an array of numbers based on a value
+function sortArray(arr, order) {
+  if (!validateArray(arr, 1)) {
+    return;
+  }
+
+  if (order !== 'ascending' && order !== 'descending') {
+    console.error('Invalid order value. Expected "ascending" or "descending".');
+    return;
+  }
+
+  const sortedArray = [...arr].sort((a, b) => {
+    if (order === 'ascending') {
+      return a - b;
+    } else {
+      return b - a;
+    }
+  });
+
+  printArray(sortedArray);
+}
+
+// Function to sort an array of numbers based on a value and print it
+function sortAndPrintArray(arr, order) {
+  if (!validateArray(arr, 1)) {
+    return;
+  }
+
+  if (order !== 'ascending' && order !== 'descending') {
+    console.error('Invalid order value. Expected "ascending" or "descending".');
+    return;
+  }
+
+  const sortedArray = [...arr].sort((a, b) => {
+    if (order === 'ascending') {
+      return a - b;
+    } else {
+      return b - a;
+    }
+  });
+
+  printArray(sortedArray);
+}
+
+// Example usage
+const numbers = [5, 3, 1, 4, 2];
+sortAndPrintArray(numbers, 'ascending'); // Prints: 1, 2, 3, 4, 5
+sortAndPrintArray(numbers, 'descending'); // Prints: 5, 4, 3, 2, 1
+sortAndPrintArray(numbers, 'invalid'); // Prints error: Invalid order value. Expected "ascending" or "descending".
+sortAndPrintArray([], 'ascending'); // Prints error: Array length must be at least 1.
+sortAndPrintArray([1, '2', 3], 'ascending'); // Prints error: Invalid data type in array. Expected a number.
+sortAndPrintArray('not an array', 'ascending'); // Prints error: Invalid data type. Expected an array.
+
+
+//Exercise 2
+// Function to generate 4 random lowercase letters
+function generateRandomLetters() {
+    let result = '';
+    const letters = 'abcdefijklmnoprstuvwz';
+  
+    for (let i = 0; < 4; i++) {    result += letters[Math.floor(Math.random() * letters.length)];
+    }
+  
+    return result;
+  }
+  
+  // Function to generate 1 random special character
+  function generateRandomSpecialChar() {
+    const specialChars = ['-', '_', '.', '@'];
+    return specialChars[Math.floor(Math.random() * specialChars.length)];
+  }
+  
+  // Function to generate 4 random numbers
+  function generateRandomNumbers() {
+    let result = '';
+    const numbers = '0123456789';
+  
+    for (let i = 0; i < 4; i++) {
+      result += numbers[Math.floor(Math.random() * numbers.length)];
+    }
+  
+    return result;
+  }
+  
+  // Function to generate a random password
+  function generatePassword() {
+    return generateRandomLetters() + generateRandomSpecialChar() + generateRandomNumbers();
+  }
+  
+  // Example usage
+  const password = generatePassword();
+  console.log(password); // Example output: yepf.2825
+
+  //Exercise 3
+  // Function to extract unique values from a2D array
+function extractUniqueValues(arr) {
+    const uniqueValues = [];
+  
+    for (let i =0; i <.length; i {
+      for (let j = 0; < arr[i].length; j++) {
+        if (!uniqueValues.includes(arr[i][j])) {
+          uniqueValues.push(arr[i][j]);
+        }
+      }
+    }
+  
+    return uniqueValues;
+  }
+  
+  // Function to print an array
+  function printArray(arr) {
+    console.log(arr.join(' '));
+  }
+  
+  // 2D array
+  const arr = [
+    [11, 17, 12, 13],
+    [14, 15, 16, 15],
+    [18, 10, 12, 11],
+    [17, 14, 19, 10]
+  ];
+  
+  // Extract unique values
+  const uniqueValues = extractUniqueValues(arr);
+  
+  // Print the result
+  printArray(uniqueValues); // Output: 11 17 12 13 14 15 16 18 10 19
+
+  //Exercise 4
+  // Function to check if two strings are anagrams
+function areAnagrams(str1, str2) {
+    if (str1. !== str2.length) {
+   return false;
+    }
+  
+    const sortedStr1 = str1.split('').sort().join('');
+    const sortedStr2 = str2.split('').sort().join('');
+  
+    return sortedStr1 === sortedStr2;
+  }
+  
+  // Function to list anagrams
+  function listAnagrams(arr) {
+    const anagrams = {};
+  
+    for (let i = 0; i < arr.length; i++) {
+      const word = arr[i];
+      const sortedWord = word.split('').sort().join('');
+  
+      if (anagrams[sortedWord]) {
+        anagrams[sortedWord].push(word);
+      } else {
+        anagrams[sortedWord] = [word];
+      }
+    }
+  
+    const result = [];
+  
+    for (const key in anagrams) {
+      if (anagrams.hasOwnProperty(key) && ans[key].length > 1) {
+        result.push(anagrams[key]);
+      }
+    }
+  
+    return result;
+  }
+  
+  // Array of strings
+  const arr = [
+    'earth',
+    'hater',
+    'heart',
+    'herat',
+    'land',
+    'part',
+    'prat',
+    'pearl',
+    'power',
+    'rapt',
+    'raptor',
+    'rathe',
+    'tarp',
+    'tradition',
+    'trap',
+    'tramp',
+    'tour'
+  ];
+  
+  // List anagrams
+  const anagrams = listAnagrams(arr);
+  
+  // Print the result
+  for (let i = 0; i < anagrams.length; i++) {
+    console.log(`Anagrams for ${anagrams[i][0]}: ${anagrams[i].slice(1).join(', ')}`);
+  }
+  
+  // Output:
+  // Anagrams for hater: heart, herat
+  // Anagrams for part: prat
+  // Anagrams for pearl: parle
+  // Anagrams for power: prow
+  // Anagrams for rapt: part, prat
+  // Anagrams for raptor: trap, tramp
+  // Anagrams for rathe: heart, herat
+  // Anagrams for tarp: part, prat
